@@ -30,6 +30,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		84FF17472CD6830700D97EDB /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A59F7D882CD67A0700EE93CF /* Cat-egorize */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Cat-egorize";
@@ -79,6 +84,7 @@
 				A59F7D9B2CD67A0900EE93CF /* Cat-egorizeTests */,
 				A59F7DA52CD67A0900EE93CF /* Cat-egorizeUITests */,
 				A59F7D872CD67A0700EE93CF /* Products */,
+				84FF17472CD6830700D97EDB /* Models */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +114,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				84FF17472CD6830700D97EDB /* Models */,
 				A59F7D882CD67A0700EE93CF /* Cat-egorize */,
 			);
 			name = "Cat-egorize";
