@@ -14,7 +14,7 @@ let sampleSightings = [
 struct UserProfileView: View {
     
     // color preferences
-    init() {
+    init(user: User) {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         
@@ -25,18 +25,22 @@ struct UserProfileView: View {
         
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
+        self.user = user
     }
     
     // Tracks selected view ("My Cats" or "My Sightings")
     @State private var selectedView: String = "My Cats"
     
-    @State var user = User(username: "Example_User", profilePicture: "Sample_pfp", userLocation: "Chapel Hill, NC", cats: [
-        Cat(profilePicture: "junior_pfp", name: "Junior", breed: "American Shorthair", coat: "gray", age: "14", sightings: []),
-        Cat(profilePicture: "bingus_pfp", name: "Bingus", breed: "British Shorthair", coat: "tuxedo", age: "1", sightings: [])],
-        sightings: [
-            Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "sighting1"),
-            Sightings(identity: Cat(profilePicture: "junior_pfp", name: "Junior", breed: "American Shorthair", coat: "tuxedo", age: "14", sightings: []), timestamp: Date(), location: "Huntersville, NC", image: "sighting2")]
-    )
+    @State var user: User
+    
+//    @State var user = User(username: "Example_User", profilePicture: "Sample_pfp", userLocation: "Chapel Hill, NC", cats: [
+//        Cat(profilePicture: "junior_pfp", name: "Junior", breed: "American Shorthair", coat: "gray", age: "14", sightings: []),
+//        Cat(profilePicture: "bingus_pfp", name: "Bingus", breed: "British Shorthair", coat: "tuxedo", age: "1", sightings: [])],
+//        sightings: [
+//            Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "sighting1"),
+//            Sightings(identity: Cat(profilePicture: "junior_pfp", name: "Junior", breed: "American Shorthair", coat: "tuxedo", age: "14", sightings: []), timestamp: Date(), location: "Huntersville, NC", image: "sighting2")]
+//    )
     
     var body: some View {
             VStack(alignment: .leading, spacing: 10) {
@@ -107,4 +111,6 @@ struct UserProfileView: View {
             Spacer()
         }
     }
+    
+    
 }

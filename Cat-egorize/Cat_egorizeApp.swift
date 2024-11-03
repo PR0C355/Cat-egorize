@@ -7,9 +7,11 @@
 
 import SwiftUI
 import SwiftData
+import Supabase
 
 @main
 struct Cat_egorizeApp: App {
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
