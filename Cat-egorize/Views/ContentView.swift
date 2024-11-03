@@ -9,22 +9,27 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @State private var tabState = ""
     var body: some View {
-        TabView {
+        TabView(selection: $tabState) {
             UserProfileView()
                 .tabItem {
                     Label("Home", systemImage: "person.circle")
                 }
+                .tag("home")
 
             LocalFeedView(sightings: sampleSightings)
                 .tabItem {
                     Label("Local", systemImage: "map")
                 }
+                .tag("local")
 
-            AddSightingView()
+            AddSightingView(tabState: $tabState)
                 .tabItem {
                     Label("Add Sighting", systemImage: "plus.circle")
                 }
+                .tag("add")
+                .toolbar(.hidden, for: .tabBar)
         }
     }
 }
