@@ -11,7 +11,7 @@ struct MyCatsView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 15) {
                 // lists all users cats
                 List(cats) { cat in
                     NavigationLink(destination: CatProfileView(cat: cat)) {
@@ -20,7 +20,6 @@ struct MyCatsView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)
-                                .padding()
                             Text(cat.name)
                                 .font(.title)
                         }
