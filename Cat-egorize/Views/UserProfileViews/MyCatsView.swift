@@ -22,13 +22,15 @@ struct MyCatsView: View {
                             Image(cat.profilePicture)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 150, height: 150)
                             Text(cat.name)
                                 .font(.title)
                         }
                     }
                 }
                 .listStyle(PlainListStyle())
+                .padding(.horizontal)
+                .background(Color(red: 10/255, green: 25/255, blue: 47/255, opacity: 0.8))
             }
             
             // Sheet presentation tied to selectedCat state
