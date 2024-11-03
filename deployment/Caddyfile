@@ -1,0 +1,13 @@
+cat-egorize.sanguinare.dev {
+
+
+     handle /ai/* {
+        reverse_proxy webui:3000
+    }
+
+    handle {
+        reverse_proxy kong:8000
+    }
+
+
+}

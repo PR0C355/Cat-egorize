@@ -1,0 +1,18 @@
+CONTAINER ID   IMAGE          COMMAND                   CREATED       STATUS                   PORTS                                                                      NAMES
+17631b16ea31   3b771c16c5de   "docker-entrypoint.s…"    4 hours ago   Up 4 hours (unhealthy)   5000/tcp                                                                   storage
+b0f71d05075c   d7ec0742d65c   "/usr/bin/tini -s -g…"    4 hours ago   Up 4 hours               0.0.0.0:5432->5432/tcp, 0.0.0.0:6543->6543/tcp                             supavisor
+dd1587450ba5   4cd9460a515e   "docker-entrypoint.s…"    4 hours ago   Up 4 hours (unhealthy)   3000/tcp                                                                   studio
+07c83f04f49f   51857b797183   "edge-runtime start …"    4 hours ago   Up 4 hours                                                                                          functions
+13d1781d638a   3cefb958bcd6   "bash -c 'eval \"echo…"   4 hours ago   Up 4 hours (healthy)     0.0.0.0:8000->8000/tcp, 8001/tcp, 0.0.0.0:8443->8443/tcp, 8444/tcp         kong
+fb5a87341a6f   81f550d4f8e8   "/usr/bin/tini -s -g…"    4 hours ago   Up 4 hours (healthy)                                                                                realtime
+e91f6cf76b7b   4907814fe6b8   "auth"                    4 hours ago   Up 4 hours (healthy)                                                                                auth
+571feef0d012   d5d7355804d5   "docker-entrypoint.s…"    4 hours ago   Up 4 hours (healthy)     8080/tcp                                                                   meta
+b0035d927602   b459bfb4d5c5   "postgrest"               4 hours ago   Up 4 hours               3000/tcp                                                                   rest
+ef631195c224   989590782684   "sh run.sh"               4 hours ago   Up 4 hours (healthy)     0.0.0.0:4000->4000/tcp                                                     analytics
+ac34132e6870   632d750850d2   "docker-entrypoint.s…"    4 hours ago   Up 4 hours               5432/tcp                                                                   db
+ebdd3ea2fcf0   f0494e814793   "/usr/local/bin/vect…"    4 hours ago   Up 4 hours (healthy)                                                                                vector
+676eb094cfcf   f8b2f036c8ff   "/bin/weaviate --hos…"    4 hours ago   Up 4 hours               0.0.0.0:50051->50051/tcp, 0.0.0.0:8090->8080/tcp                           weaviate
+ac1421c23db9   abc26d20bef2   "/bin/sh -c 'uvicorn…"    4 hours ago   Up 4 hours               0.0.0.0:9090->8080/tcp                                                     img2vec
+864aa357de50   25d21ff36e2b   "imgproxy"                4 hours ago   Up 4 hours (healthy)     8080/tcp                                                                   imgproxy
+68e0fe60737e   11229070f1e2   "caddy run --config …"    4 hours ago   Up 4 hours               0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp, 0.0.0.0:443->443/udp, 2019/tcp   caddy
+9a6568984599   1496175979b3   "bash start.sh"           4 hours ago   Up 4 hours (healthy)     8080/tcp                                                                   webui
