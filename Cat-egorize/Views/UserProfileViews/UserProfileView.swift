@@ -7,8 +7,8 @@
 import SwiftUI
 
 let sampleSightings = [
-    Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "sighting1"),
-    Sightings(timestamp: Date(), location: "Huntersville, NC", image: "sighting2")
+    Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "junior2"),
+    Sightings(timestamp: Date(), location: "Huntersville, NC", image: "stevie2")
 ]
 
 struct UserProfileView: View {
