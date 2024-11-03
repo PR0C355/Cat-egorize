@@ -147,34 +147,125 @@ struct ContentView: View {
     func genData(email: String) -> User {
         let junior: Cat = Cat(profilePicture: "junior_pfp", name: "Junior", breed: "American Shorthair", coat: "tuxedo", age: "14", sightings: [])
         let bingus: Cat = Cat(profilePicture: "bingus_pfp", name: "Bingus", breed: "British Shorthair", coat: "gray", age: "1", sightings: [])
-        if email == "tumicooll@gmail.com" {
-            return User(id: UUID(), username: "Sarah Threewits", profilePicture: "Sample_pfp", userLocation: "Chapel Hill, NC",
+        let squeaks: Cat = Cat(profilePicture: "squeaks_pfp", name: "Squeaks", breed: "American Shorthair", coat: "tabby", age: "9", sightings: [])
+        let joey: Cat = Cat(profilePicture: "joey_pfp", name: "Joey", breed: "Bengal", coat: "brown spotted", age: "5", sightings: [])
+        let stevie: Cat = Cat(profilePicture: "stevie_pfp", name: "Stevie", breed: "Turkish van", coat: "white and orange", age: "2", sightings: [])
+        let stewey: Cat = Cat(profilePicture: "stewey_pfp", name: "Stewey", breed: "American Shorthair", coat: "calico", age: "10", sightings: [])
+        let stray: Cat = Cat(profilePicture: "stray1", name: "Unknown", breed: "Manx", coat: "grey and white", age: "Unknown", sightings: [])
+        
+        if email == "starrycat42@gmail.com" {
+            return User(id: UUID(), username: "StarryCat42", profilePicture: "profile1", userLocation: "Chapel Hill, NC",
                         cats: [
                             junior,
                             bingus
                         ],
                         sightings: [
-                            Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "sighting1"),
-                            Sightings(identity: junior, timestamp: Date(), location: "Huntersville, NC", image: "sighting2")
-                        ]
+                            Sightings(identity: joey, timestamp: Date(), location: "Chapel Hill, NC", image: "joey4"),
+                            Sightings(identity: stewey, timestamp: Date(), location: "Carrboro, NC", image: "stewey2"),
+                            Sightings(identity: stevie, timestamp: Date(), location: "Chapel Hill, NC", image: "stevie3")                        ]
                     )
         }
         
-        return User(id: UUID(), username: "Sarah Threewits", profilePicture: "Sample_pfp", userLocation: "Chapel Hill, NC",
+        return User(id: UUID(), username: "StarryCat42", profilePicture: "profile1", userLocation: "Chapel Hill, NC",
                     cats: [
                         junior,
                         bingus
                     ],
                     sightings: [
-                        Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "sighting1"),
-                        Sightings(identity: junior, timestamp: Date(), location: "Huntersville, NC", image: "sighting2")
+                        Sightings(identity: joey, timestamp: Date(), location: "Chapel Hill, NC", image: "joey4"),
+                        Sightings(identity: stewey, timestamp: Date(), location: "Carrboro, NC", image: "stewey2")
                     ]
                 )
         
-    }
+        if email == "NebulaHunter@gmail.com" {
+            return User(id: UUID(), username: "NebulaHunter", profilePicture: "profile2", userLocation: "Chapel Hill, NC",
+                        cats: [
+                            
+                            stevie
+                        ],
+                        sightings: [
+                            Sightings(identity: squeaks, timestamp: Date(), location: "Carrboro, NC", image: "squeaks3"),
+                            Sightings(identity: junior, timestamp: Date(), location: "Huntersville, NC", image: "junior3")
+                        ]
+                    )
+        }
+        
+        return User(id: UUID(), username: "NebulaHunter", profilePicture: "profile2", userLocation: "Chapel Hill, NC",
+                    cats: [
+                        
+                        stevie
+                    ],
+                    sightings: [
+                        Sightings(identity: squeaks, timestamp: Date(), location: "Carrboro, NC", image: "squeaks3"),
+                        Sightings(identity: junior, timestamp: Date(), location: "Huntersville, NC", image: "junior3")
+                    ]
+                )    }
     
+        if email == "astrowhiskers@gmail.com" {
+            return User(id: UUID(), username: "AstroWhiskers", profilePicture: "profile3", userLocation: "Chapel Hill, NC",
+                        cats: [
+                            joey
+                        ],
+                        sightings: [
+                            Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "stray2"),
+                            Sightings(identity: stevie, timestamp: Date(), location: "Chapel Hill, NC", image: "stevie2")
+                        ]
+                    )
+        }
+        
+        return User(id: UUID(), username: "AstroWhiskers", profilePicture: "profile3", userLocation: "Chapel Hill, NC",
+                    cats: [
+                        joey
+                    ],
+                    sightings: [
+                        Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "stray2"),
+                        Sightings(identity: stevie, timestamp: Date(), location: "Chapel Hill, NC", image: "stevie2")
+                    ]
+                )
     
-
+        if email == "cosmicpaws@gmail.com" {
+            return User(id: UUID(), username: "CosmicPaws", profilePicture: "profile4", userLocation: "Chapel Hill, NC",
+                        cats: [
+                            stewey
+                        ],
+                        sightings: [
+                            Sightings(identity: joey, timestamp: Date(), location: "Chapel Hill, NC", image: "joey2"),
+                            Sightings(identity: squeaks, timestamp: Date(), location: "Huntersville, NC", image: "squeaks2")
+                        ]
+                    )
+        }
+        
+        return User(id: UUID(), username: "CosmicPaws", profilePicture: "profile4", userLocation: "Carrboro, NC",
+                    cats: [
+                        stewey
+                    ],
+                    sightings: [
+                        Sightings(identity: joey, timestamp: Date(), location: "Chapel Hill, NC", image: "joey2"),
+                        Sightings(identity: squeaks, timestamp: Date(), location: "Huntersville, NC", image: "squeaks2")
+                    ]
+                )
+    
+        if email == "galactictail@gmail.com" {
+            return User(id: UUID(), username: "GalacticTail", profilePicture: "profile5", userLocation: "Carrboro, NC",
+                        cats: [
+                            squeaks
+                        ],
+                        sightings: [
+                            Sightings(identity: stevie, timestamp: Date(), location: "Chapel Hill, NC", image: "stevie2"),
+                            Sightings(identity: junior, timestamp: Date(), location: "Chapel Hill, NC", image: "junior2")
+                        ]
+                    )
+        }
+        
+        return User(id: UUID(), username: "GalacticTail", profilePicture: "profile5", userLocation: "Chapel Hill, NC",
+                    cats: [
+                        squeaks
+                    ],
+                    sightings: [
+                        Sightings(identity: stevie, timestamp: Date(), location: "Chapel Hill, NC", image: "stevie2"),
+                        Sightings(identity: junior, timestamp: Date(), location: "Chapel Hill, NC", image: "junior2")
+                    ]
+                )
 }
 
 #Preview {
