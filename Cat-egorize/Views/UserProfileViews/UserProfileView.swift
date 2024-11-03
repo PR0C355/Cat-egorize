@@ -6,6 +6,11 @@
 //
 import SwiftUI
 
+let sampleSightings = [
+    Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "sighting1"),
+    Sightings(timestamp: Date(), location: "Huntersville, NC", image: "sighting2")
+]
+
 struct UserProfileView: View {
     // Tracks selected view ("My Cats" or "My Sightings")
     @State private var selectedView: String = "My Cats"
@@ -15,7 +20,7 @@ struct UserProfileView: View {
         Cat(profilePicture: "bingus_pfp", name: "Bingus", breed: "British Shorthair", age: 1, sightings: [])],
         sightings: [
             Sightings(timestamp: Date(), location: "Chapel Hill, NC", image: "sighting1"),
-            Sightings(timestamp: Date(), location: "Huntersville, NC", image: "sighting2")]
+            Sightings(identity: Cat(profilePicture: "junior_pfp", name: "Junior", breed: "American Shorthair", age: 14, sightings: []), timestamp: Date(), location: "Huntersville, NC", image: "sighting2")]
     )
     
     var body: some View {

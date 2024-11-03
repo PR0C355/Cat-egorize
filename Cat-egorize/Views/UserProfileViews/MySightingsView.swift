@@ -13,6 +13,7 @@ struct MySightingsView: View {
         VStack(alignment: .leading) {
             Text("My Sightings")
                 .font(.largeTitle)
+                .bold()
                 .padding()
             List {
                 ForEach(sightings, id: \.id) { sighting in
@@ -21,7 +22,6 @@ struct MySightingsView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200, height: 200)
-                            .padding()
                         
                         Text("Location: \(sighting.location)")
                         

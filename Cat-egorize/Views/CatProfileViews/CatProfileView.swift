@@ -34,7 +34,7 @@ struct CatProfileView: View {
                     
                     Divider()
                     // navigation to cats sightings
-                    NavigationLink(destination: CatSightingsView(sightings: cat.sightings)) {
+                    NavigationLink(destination: CatSightingsView(sightings: cat.sightings!)) {
                         Text("\(cat.name)'s Sightings")
                             .navigationTitle("\(cat.name)'s Profile")
                     }

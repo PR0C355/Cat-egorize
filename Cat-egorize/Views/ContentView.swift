@@ -16,7 +16,7 @@ struct ContentView: View {
                     Label("Home", systemImage: "person.circle")
                 }
 
-            LocalFeedView()
+            LocalFeedView(sightings: sampleSightings)
                 .tabItem {
                     Label("Local", systemImage: "map")
                 }

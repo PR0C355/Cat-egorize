@@ -12,5 +12,5 @@ struct Cat: Identifiable {
     let name: String
     let breed: String? // optional breed information
     let age: Int? // optional age information
-    var sightings: [Sightings] // List of sightings attached to cat
+    var sightings: [Sightings]? // List of sightings attached to cat
 }

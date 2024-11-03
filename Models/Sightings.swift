@@ -8,6 +8,7 @@ import Foundation
 
 struct Sightings: Identifiable {
     let id = UUID()
+    var identity: Cat? // if sighting is linked to a cat
     var timestamp: Date // date and time of the sighting
     var location: String //location of sighting
     var image: String // name of image asset/URL for the sighting
