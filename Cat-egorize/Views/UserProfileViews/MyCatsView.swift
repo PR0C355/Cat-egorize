@@ -7,14 +7,17 @@
 import SwiftUI
 
 struct MyCatsView: View {
-    var cats: [Cat] // Accepts an array of cats
+    var cats: [Cat]
+    
+    @State private var selectedCat: Cat? // cat that fills in the sheet
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 15) {
-                // lists all users cats
                 List(cats) { cat in
-                    NavigationLink(destination: CatProfileView(cat: cat)) {
+                    Button(action: {
+                        selectedCat = cat
+                    }) {
                         HStack {
                             Image(cat.profilePicture)
                                 .resizable()
@@ -27,7 +30,14 @@ struct MyCatsView: View {
                 }
                 .listStyle(PlainListStyle())
             }
-            .navigationTitle("My Cats")
+            
+            // Sheet presentation tied to selectedCat state
+            .sheet(item: $selectedCat) { cat in
+                CatProfileView(cat: cat)
+                    .edgesIgnoringSafeArea(.all) // Makes the sheet full screen
+            }
         }
     }
 }
+
+

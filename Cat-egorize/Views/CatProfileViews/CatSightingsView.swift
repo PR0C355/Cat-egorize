@@ -26,7 +26,7 @@ struct CatSightingsView: View {
                             Image("\(sighting.image)")
                         }
                         .padding()
-                        .background(Color.gray.opacity(0.1))
+                        .background(Color(red: 10/255, green: 25/255, blue: 47/255, opacity: 0.3))
                         .cornerRadius(8)
                     }
                 }

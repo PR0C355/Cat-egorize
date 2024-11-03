@@ -11,6 +11,7 @@ struct Cat: Identifiable {
     let profilePicture: String // name of image asset *subject for change
     let name: String
     let breed: String? // optional breed information
-    let age: Int? // optional age information
+    let coat: String? // optional coat information
+    let age: String? // optional age information
     var sightings: [Sightings]? // List of sightings attached to cat
 }

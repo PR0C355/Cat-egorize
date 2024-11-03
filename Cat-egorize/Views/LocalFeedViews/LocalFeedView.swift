@@ -10,6 +10,7 @@ struct LocalFeedView: View {
     @State var sightings: [Sightings] // Assuming Sightings is your model
 
     var body: some View {
+        
         NavigationView {
             List(sightings) { sighting in
                 NavigationLink(destination: LocalCatView(sighting: sighting)) {
@@ -28,6 +29,8 @@ struct LocalFeedView: View {
                 }
             }
             .navigationTitle("Local Feed")
+            .accentColor(Color.blue)
+            .background(Color(red: 10/255, green: 25/255, blue: 47/255, opacity: 0.8))
         }
     }
 }

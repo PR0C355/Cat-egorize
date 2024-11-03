@@ -20,7 +20,7 @@ struct AddSightingView: View {
         NavigationView {
             VStack {
                 // Navigation bar with back button
-                Button("Baack to Home"){
+                Button("Back to Home"){
                     tabState = "home"
                 }
                 
